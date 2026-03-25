@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test File Upload</title>
+  </head>
+  <body>
+    <h1>Test File Chunking</h1>
+    <input type="file" id="testFile" accept="image/*" />
+    <button onclick="testChunking()">Test Chunking</button>
+    <div id="result"></div>
+    <div id="preview"></div>
+
+    <script>
+      async function testChunking() {
+        const fileInput = document.getElementById("testFile");
+        const file = fileInput.files[0];
+        if (!file) {
+          alert("Please select a file");
+          return;
+        }
+
+        console.log("Original file:", file.name, file.type, file.size);
+
+        // Test with small chunks like the app does
+        const chunkSize = 32 * 1024; // 32KB
+        const totalChunks = Math.ceil(file.size / chunkSize);
+        const chunks = [];
+
+        console.log("Total chunks:", totalChunks);
+
+        // Read file in chunks
+        for (let i = 0; i < totalChunks; i++) {
+          const start = i * chunkSize;
+          const end = Math.min(start + chunkSize, file.size);
+          const chunk = file.slice(start, end);
+
+          // Convert to data URL
+          const chunkData = await readChunkAsDataURL(chunk);
+          chunks.push(chunkData);
+
+          console.log(`Chunk ${i}:`, chunkData.substring(0, 50));
+        }
+
+        // Method 1: Join chunks directly (WRONG - this is what was happening)
+        const wrongJoin = chunks.join("");
+        console.log("Wrong join preview:", wrongJoin.substring(0, 200));
+
+        // Method 2: Extract base64 and rejoin (CORRECT)
+        const base64Chunks = chunks.map((chunkData) => {
+          return chunkData.includes(",") ? chunkData.split(",")[1] : chunkData;
+        });
+        const completeBase64 = base64Chunks.join("");
+        const correctDataUrl = `data:${file.type};base64,${completeBase64}`;
+
+        console.log("Correct join preview:", correctDataUrl.substring(0, 100));
+        console.log("Correct data length:", correctDataUrl.length);
+
+        // Display both
+        document.getElementById("result").innerHTML = `
+                <h3>Results:</h3>
+                <p>Original file size: ${file.size} bytes</p>
+                <p>Total chunks: ${totalChunks}</p>
+                <p>Wrong join length: ${wrongJoin.length}</p>
+                <p>Correct join length: ${correctDataUrl.length}</p>
+                <h4>Correct Preview:</h4>
+                <img src="${correctDataUrl}" style="max-width: 300px;" onerror="alert('Failed to load!')">
+            `;
+      }
+
+      function readChunkAsDataURL(chunk) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(chunk);
+        });
+      }
+    </script>
+  </body>
+</html>

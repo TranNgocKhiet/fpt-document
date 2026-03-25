@@ -1,0 +1,5 @@
+D:\1_fpt\7_sp26\2_prn222\lab1\ChatApp\ChatApp.exe
+D:\1_fpt\7_sp26\2_prn222\lab1\ChatApp\ChatApp.dll
+D:\1_fpt\7_sp26\2_prn222\lab1\ChatApp\ChatApp.deps.json
+D:\1_fpt\7_sp26\2_prn222\lab1\ChatApp\ChatApp.runtimeconfig.json
+D:\1_fpt\7_sp26\2_prn222\lab1\ChatApp\ChatApp.pdb
