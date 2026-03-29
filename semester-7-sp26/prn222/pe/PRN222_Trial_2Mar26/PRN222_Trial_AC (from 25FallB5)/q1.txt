@@ -1,0 +1,94 @@
+QUESTION 1
+You are provided with a console application Port3000Server in given materials, acting as a TCP server, listening for connections at 127.0.0.1:3000. The server stores information about readers, books, and the relationships between readers and books (borrow records). The server processes client requests as follows:
+The client sends an integer (Reader ID) to the server.
+The server responds with a JSON string containing a list of books that the reader with the given ID has borrowed, including: Book ID, Title, Author, Borrow Date, Return Date, and Status.
+If the Reader ID does not exist in the readers list, the server returns a special JSON response indicating "Reader not found".
+If the Reader ID exists but has no borrow records, the server returns a JSON containing an empty list.
+Your task is to develop a .NET 8 console application that acts as a client, connects to the server, and implements the functionality described below.
+The server manages the following data structures:
+Readers Table:
+- ReaderID (int) - Primary Key
+- FullName (string)
+- Email (string)
+- PhoneNumber (string)
+- RegistrationDate (DateTime)
+
+Books Table:
+- BookID (string) - Primary Key
+- Title (string)
+- Author (string)
+- ISBN (string)
+- PublishYear (int)
+- Category (string)
+
+BorrowRecords Table:
+- RecordID (int) - Primary Key
+- ReaderID (int) - Foreign Key
+- BookID (string) - Foreign Key
+- BorrowDate (DateTime)
+- ReturnDate (DateTime?) - Nullable
+- Status (string) - "Borrowed", "Returned", "Overdue"
+Note: The server will be provided and running on port 3000. You only need to focus on developing the client application.
+The client application must:
+1. Wait for User Input:
+-  Continuously prompt the user to enter an integer (Reader ID) via the console.
+-  If the user presses Enter (empty input), the program terminates.
+2. Validate Input:
+-  Check if the user input is a valid integer greater than 0.
+-  If the input is not a valid integer or not greater than 0, display an error message and prompt the user to try again.
+Examples of invalid input:
+Enter Reader ID (or press Enter to exit): abc
+Invalid input! Please enter a valid Reader ID (positive integer).
+
+Enter Reader ID (or press Enter to exit): -5
+Invalid input! Please enter a valid Reader ID (positive integer).
+
+Enter Reader ID (or press Enter to exit): 0
+Invalid input! Please enter a valid Reader ID (positive integer).
+3. Connect to the Server:
+-  Establish a TCP connection to the server at 127.0.0.1:3000.
+-  Send the integer (Reader ID) entered by the user to the server.
+-  If the server is not running or the connection fails, display an error message (e.g., "Library server is not running. Please try again later.") and return to waiting for new user input.
+Example connection failure:
+Enter Reader ID (or press Enter to exit): 101
+Library server is not running. Please try again later.
+4. Process Server Response:
+-  Receive the JSON string from the server and deserialize it.
+-  The server can return three types of responses:
+1.   Reader not found: Display "Reader with ID {ID} does not exist."
+2.  Reader exists with borrow records: Display each book's information in a clear format
+3.  Reader exists with no borrow records: Display "No borrow records found for Reader ID {ID}."
+Example - Reader does not exist:
+Enter Reader ID (or press Enter to exit): 999
+Reader with ID 999 does not exist.
+Example - Reader exists but no borrow records:
+Enter Reader ID (or press Enter to exit): 103
+No borrow records found for Reader ID 103.
+Example - Reader exists with borrow records:
+Enter Reader ID (or press Enter to exit): 101
+=== Borrow History for Reader ID: 101 
+Book ID: B1001
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Borrow Date: 2024-01-15
+Return Date: 2024-02-15
+Status: Returned
+---
+Book ID: B1002
+Title: To Kill a Mockingbird
+Author: Harper Lee
+Borrow Date: 2024-02-20
+Return Date: Not returned yet
+Status: Borrowed
+---
+Book ID: B1003
+Title: 1984
+Author: George Orwell
+Borrow Date: 2024-01-10
+Return Date: 2024-02-25
+Status: Overdue
+
+-  After processing the response, return to waiting for new user input unless the user has entered an empty string.
+Example program termination:
+Enter Reader ID (or press Enter to exit): 
+Goodbye! Library client is shutting down.

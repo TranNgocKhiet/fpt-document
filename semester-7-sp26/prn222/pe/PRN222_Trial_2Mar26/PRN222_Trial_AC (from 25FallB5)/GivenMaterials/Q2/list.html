@@ -1,0 +1,82 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    
+    <div b-uad6alqp6s class="container">
+        <main b-uad6alqp6s role="main" class="pb-3">
+
+            <h2>List of books</h2>
+
+            <!-- Dropdown filter tác giả -->
+            <form method="get" action="/Book">
+                <label for="authorId">Filter by author:</label>
+                <select name="authorId" id="sl_authors">
+                    <option id="op_0" value="">All authors</option>
+                    <option id="op_1" value="1">Nguyen Nhat Anh</option>
+                    <option id="op_2" value="2">Stephen Hawking</option>
+                    <option id="op_3" value="3">Agatha Christie</option>
+                </select>
+                <button id="bt_filter" type="submit">Filter</button>
+            </form>
+
+            <!-- Bảng danh sách sách -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>BookId</th>
+                        <th>Title</th>
+                        <th>Publication Year</th>
+                        <th>Authors</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="td_bookId_1">1</td>
+                        <td id="td_title_1">Blue Eyes</td>
+                        <td id="td_publicationYear_1">1990</td>
+                        <td id="td_authors_1">
+                            <div id="div_1_1">Nguyen Nhat Anh</div>
+                            <div id="div_1_4">Dale Carnegie</div>
+
+                        </td>
+                        <td id="td_action_1">
+                            <a id="a_1" href="/Book/1">View Details</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_bookId_2">2</td>
+                        <td id="td_title_2">Promise of an Icon</td>
+                        <td id="td_publicationYear_2">1995</td>
+                        <td id="td_authors_2">
+                            <div id="div_2_1">Nguyen Nhat Anh</div>
+                            <div id="div_2_3">Agatha Christie</div>
+
+                        </td>
+                        <td id="td_action_2">
+                            <a id="a_2" href="/Book/2">View Details</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_bookId_3">3</td>
+                        <td id="td_title_3">Advice from a Physicist</td>
+                        <td id="td_publicationYear_3">2018</td>
+                        <td id="td_authors_3">
+                            <div id="div_3_2">Stephen Hawking</div>
+
+                        </td>
+                        <td id="td_action_3">
+                            <a id="a_3" href="/Book/3">View Details</a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+</body>
+</html>

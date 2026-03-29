@@ -1,0 +1,67 @@
+QUESTION 2
+In this question, you are asked to write an MVC/Razor Pages application, using a database that has the following schema:
+
+1. Important Notes:
+-   It is required to assign the URL to access the web page as given. Wrong URL will result in the examiner cannot access your developed features. You will receive ZERO for any WRONG URL.
+-   Zero marks will be awarded if the database connection string is not stored in the file appsettings.json.
+-   All input and output elements in the HTML source must have an 'id' attribute to ensure accessibility and traceability. Students can refer to the list.html and detail.html files in given materials, which provides code snippets for the assignment. 
+2. Requirements
+2.1. Book List Page (see Figure 1)
+
+
+URL: /Book
+-  Display all books from the Books table in a tabular format with the following columns:
+-   BookId.
+-   The book's title (e.g., "Programming in C#").
+-    PublicationYear.
+- Authors: The list of the book's authors (retrieved from the Authors table via BookAuthors). Each author's name is placed on a separate line.
+-  Each row in the table should have a "View Details" link redirecting to the detail page with the URL /Book/{BookId}.
+-  Include a dropdown list that displays all authors from the database (from the Authors table). Add into dropdownlist the item "All authors".
+
+
+ID Requirements:
+- Each <td> tag in the table that lists books will have an id in the form td_{columnName}_{bookId} (where bookId is the id in database of the book and columnName written in camelCase format): td_bookId_1, td_title_1, td_publicationYear_1, td_authors_1, td_action_1
+-     Each author's name in column Authors, must be placed in an <div> tag with id div_{bookId}_{authorId} (where bookId and authorId are the id in database of book and author). Example: div_1_1
+-     Each "View Authors" link must be placed in an <a> tag with id a_{bookId}. Example a_1
+-     The Dropdownlist using <select> tag that has id sl_authors
+-     The option "All authors" is set by default, using <option> tag with id op_0
+-   Each option tag in Dropdownlist has an id in the form op_{authorId} (where authorId is the id in database of author). Example: op_1, op_2
+2.2. Filter books by author (see Figure 1)
+-   When a user selects an author from the dropdown and clicks the "Filter" button, the book list should only show books associated with the selected author. Note that, if the user selects "All authors" list all the books.
+-     The [Filter] button using <input> tag that has id bt_filter
+2.3. Book Authors Detail Page (see Figure 2)
+
+
+-  URL: /Book/{BookId} (e.g., /Book/1)
+-  Display basic information of the book:
+BookId: The book's ID.
+Title: The book's title.
+PublicationYear: The publication year.
+-  Display a list of all authors associated with the book in a table with the following columns:
+AuthorId: The author's ID 
+Name: The author's name 
+BirthYear: The author's birth year
+ID Requirement:
+-   Each piece of basic information in the book (BookId, Title, Publication Year) is placed within a <span> tag, with the IDs being as folows span_bookId, span_title, span_publicationYear.
+- Each <td> tag in the table that lists authors will have an id in the form td_{columnName}_{authorId} (where authorId is the id in database of the author and columnName written in camelCase format). Example: td_authorId_1, td_authorName_1, td_birthYear_1
+3. Summary of HTML Elements ID
+The HTML id requirements are summarized in the table below:
+Page	Element	Element Tag	Id
+/Book/	Each cell in the table that lists books	<td>	td_{columnName}_{bookId}
+	Each author in list of authors of one book (in table)	<div>	div_{bookId}_{authorId}
+	Each ViewAuthors link	<a>	a_{bookId}
+	DropdownList Authors (Filter)	<select>	sl_authors
+	Option "All Authors" (Filter)	<option>	op_0
+	Each author option in DropdownList	<option>	op_{authorId}
+	Button Filter	<input>	bt_filter
+/Book/{BookId}	Field BookId	<span>	span_{bookId}
+	Field Title of book	<span>	span_{title}
+	Field PublicationYear	<span>	span_{publicationYear}
+	Each cell in the table that lists authors	<td>	td_{columnName}_{authorId}
+See list.html and detail.html in the Given Materials
+Note: Ensure all ID requirements are strictly followed so that the examiner can automatically verify your work.
+4. Summary of Required URLs
+Function	URL
+List and filter books	/Book
+Details of the book with id {BookId}	/Book/{BookId}
+
