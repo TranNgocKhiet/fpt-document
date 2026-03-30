@@ -1,0 +1,108 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Modern Chat";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/chat.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="user-section">
+                <div class="input-group">
+                    <label for="username">User:</label>
+                    <input type="text" id="username" placeholder="Enter your name" />
+                    <button id="connect-btn" class="connect-btn">Connect</button>
+                </div>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </div>
+
+        <!-- Chat messages -->
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+
+        <!-- Typing indicator -->
+        <div id="typing-indicator" class="typing-indicator" style="display: none;">
+            <span id="typing-text"></span>
+        </div>
+
+        <!-- Message input -->
+        <div class="message-input-container">
+            <button id="file-btn" class="icon-btn" disabled title="Upload file">📎</button>
+            <button id="local-file-btn" class="icon-btn" disabled title="Share local file (server only)">📁</button>
+            <button id="emoji-btn" class="icon-btn" disabled>😊</button>
+            <input type="text" id="message-input" placeholder="Type a message..." disabled />
+            <button id="send-btn" class="send-btn" disabled>➤</button>
+            
+            <!-- Emoji picker -->
+            <div id="emoji-picker" class="emoji-picker" style="display: none;">
+                <div class="emoji-header">Emojis</div>
+                <div class="emoji-grid">
+                    <button class="emoji-btn">😀</button>
+                    <button class="emoji-btn">😂</button>
+                    <button class="emoji-btn">🤣</button>
+                    <button class="emoji-btn">😍</button>
+                    <button class="emoji-btn">😎</button>
+                    <button class="emoji-btn">🥳</button>
+                    <button class="emoji-btn">👍</button>
+                    <button class="emoji-btn">❤️</button>
+                    <button class="emoji-btn">🔥</button>
+                    <button class="emoji-btn">✨</button>
+                    <button class="emoji-btn">🎉</button>
+                    <button class="emoji-btn">🎁</button>
+                    <button class="emoji-btn">🤔</button>
+                    <button class="emoji-btn">😱</button>
+                    <button class="emoji-btn">🚀</button>
+                    <button class="emoji-btn">💻</button>
+                </div>
+            </div>
+            
+            <!-- Local file path dialog -->
+            <div id="local-file-dialog" class="local-file-dialog" style="display: none;">
+                <div class="dialog-backdrop"></div>
+                <div class="dialog-content">
+                    <h3>Share Local File (Server Only)</h3>
+                    <p>Enter the full path to a file on this server:</p>
+                    <input type="text" id="local-file-path" placeholder="C:\path\to\file.ext or /path/to/file.ext" />
+                    <div class="dialog-buttons">
+                        <button id="local-file-share-btn" class="dialog-btn primary">Share</button>
+                        <button id="local-file-cancel-btn" class="dialog-btn">Cancel</button>
+                    </div>
+                    <p class="dialog-note">Note: File must exist on the server machine. Other users will download it from this path.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- File input (hidden) -->
+    <input type="file" id="file-input" style="display: none;" accept="*/*" multiple="false" />
+
+    <!-- Image modal for expansion -->
+    <div id="image-modal" class="image-modal" style="display: none;">
+        <div class="image-modal-backdrop"></div>
+        <div class="image-modal-content">
+            <button class="image-modal-close">&times;</button>
+            <img id="modal-image" src="" alt="" />
+            <div class="image-modal-controls">
+                <button id="modal-download-btn" class="modal-download-btn">
+                    📥 Download Image
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{399CEA20-477B-4F53-B6D7-9E1812996A26}|Server\\Server.csproj|d:\\6_repositories\\prn222-sp26\\lab 2\\chatapp\\chat_app_code\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{399CEA20-477B-4F53-B6D7-9E1812996A26}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|d:\\6_repositories\\prn222-sp26\\lab 2\\chatapp\\chat_app_code\\chatapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|d:\\6_repositories\\prn222-sp26\\lab 2\\chatapp\\chat_app_code\\chatapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER\\AppData\\Local\\Temp\\.vsdbgsrc\\f908894ceb77c11aee4ddf0033a6346457e3ee3fef9502447bef90de9774aea7\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{399CEA20-477B-4F53-B6D7-9E1812996A26}|Server\\Server.csproj|d:\\6_repositories\\prn222-sp26\\lab 2\\chatapp\\chat_app_code\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{399CEA20-477B-4F53-B6D7-9E1812996A26}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|d:\\6_repositories\\prn222-sp26\\lab 2\\chatapp\\chat_app_code\\chatapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4AAD9CAE-B095-3F5F-CF1E-26EE5776EB75}|ChatApp\\ChatApp.csproj|solutionrelative:chatapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Server.csproj",
+              "DocumentMoniker": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-15T03:52:27.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T15:29:58.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ChatApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ChatApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T17:54:56.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\App.xaml",
+              "RelativeDocumentMoniker": "ChatApp\\App.xaml",
+              "ToolTip": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\App.xaml",
+              "RelativeToolTip": "ChatApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-13T18:45:40.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\AppData\\Local\\Temp\\.vsdbgsrc\\f908894ceb77c11aee4ddf0033a6346457e3ee3fef9502447bef90de9774aea7\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\ACER\\AppData\\Local\\Temp\\.vsdbgsrc\\f908894ceb77c11aee4ddf0033a6346457e3ee3fef9502447bef90de9774aea7\\XamlReader.cs",
+              "ViewState": "AgIAAKsBAAAAAAAAAAAowLQBAAACAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T18:41:39.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ChatApp\\MainWindow.xaml",
+              "ToolTip": "D:\\6_repositories\\prn222-sp26\\Lab 2\\ChatApp\\Chat_App_Code\\ChatApp\\MainWindow.xaml",
+              "RelativeToolTip": "ChatApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-13T18:39:57.121Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

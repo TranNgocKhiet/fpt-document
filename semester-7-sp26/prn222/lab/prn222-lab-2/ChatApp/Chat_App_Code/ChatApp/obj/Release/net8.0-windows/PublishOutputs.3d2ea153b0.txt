@@ -1,9 +1,0 @@
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\ChatApp.exe
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\ChatApp.dll
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\ChatApp.deps.json
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\ChatApp.runtimeconfig.json
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\ChatApp.pdb
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\Emoji.Wpf.dll
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\Typography.GlyphLayout.dll
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\Typography.OpenFont.dll
-D:\6_repositories\prn222-sp26\Lab 2\ChatApp\Chat_App_Product\Stfu.dll
