@@ -1,0 +1,5 @@
+D:\6_repositories\fpt-document\semester-7-sp26\prn222\prn222-pe\PRN222_Trial_2Mar26\PE_PRN222_GivenSolution\Q1\Q1_khiettnse1920215\Q1.exe
+D:\6_repositories\fpt-document\semester-7-sp26\prn222\prn222-pe\PRN222_Trial_2Mar26\PE_PRN222_GivenSolution\Q1\Q1_khiettnse1920215\Q1.dll
+D:\6_repositories\fpt-document\semester-7-sp26\prn222\prn222-pe\PRN222_Trial_2Mar26\PE_PRN222_GivenSolution\Q1\Q1_khiettnse1920215\Q1.deps.json
+D:\6_repositories\fpt-document\semester-7-sp26\prn222\prn222-pe\PRN222_Trial_2Mar26\PE_PRN222_GivenSolution\Q1\Q1_khiettnse1920215\Q1.runtimeconfig.json
+D:\6_repositories\fpt-document\semester-7-sp26\prn222\prn222-pe\PRN222_Trial_2Mar26\PE_PRN222_GivenSolution\Q1\Q1_khiettnse1920215\Q1.pdb

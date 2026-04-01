@@ -1,0 +1,28 @@
+﻿@model Q2.Models.Book
+
+<h2>Book's detail</h2>
+
+<p><strong>BookId:</strong> <span id="span_bookId">@Model.BookId</span></p>
+<p><strong>Title:</strong> <span id="span_title">@Model.Title</span></p>
+<p><strong>Publication year:</strong> <span id="span_publicationYear">@Model.PublicationYear</span></p>
+
+<h3>Authors:</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>AuthorId</th>
+            <th>AuthorName</th>
+            <th>BirthYear</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ba in Model.BookAuthors)
+        {
+            <tr>
+                <td id="td_authorId_@ba.AuthorId">@ba.AuthorId</td>
+                <td id="td_authorName_@ba.AuthorId">@ba.Author.Name</td>
+                <td id="td_birthYear_@ba.AuthorId">@ba.Author.BirthYear</td>
+            </tr>
+        }
+    </tbody>
+</table>

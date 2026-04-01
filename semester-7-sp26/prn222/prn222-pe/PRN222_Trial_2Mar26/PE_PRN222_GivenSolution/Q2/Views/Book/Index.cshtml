@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Q2.Models.Book>
+@{
+    var authors = ViewBag.Authors as List<Q2.Models.Author>;
+    var selectedId = (int?)ViewBag.SelectedAuthorId;
+}
+
+<h2>List of books</h2>
+
+<form method="get" action="/Book">
+    <label for="authorId">Filter by author:</label>
+    <select name="authorId" id="sl_authors">
+        <option id="op_0" value="">All authors</option>
+        @foreach (var a in authors!)
+        {
+            <option id="op_@a.AuthorId" value="@a.AuthorId"
+                    @(selectedId == a.AuthorId ? "selected" : "")>@a.Name</option>
+        }
+    </select>
+    <input id="bt_filter" type="submit" value="Filter" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>Title</th>
+            <th>Publication Year</th>
+            <th>Authors</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td id="td_bookId_@book.BookId">@book.BookId</td>
+                <td id="td_title_@book.BookId">@book.Title</td>
+                <td id="td_publicationYear_@book.BookId">@book.PublicationYear</td>
+                <td id="td_authors_@book.BookId">
+                    @foreach (var ba in book.BookAuthors)
+                    {
+                        <div id="div_@(book.BookId)_@(ba.AuthorId)">@ba.Author.Name</div>
+                    }
+                </td>
+                <td id="td_action_@book.BookId">
+                    <a id="a_@book.BookId" href="/Book/@book.BookId">View Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

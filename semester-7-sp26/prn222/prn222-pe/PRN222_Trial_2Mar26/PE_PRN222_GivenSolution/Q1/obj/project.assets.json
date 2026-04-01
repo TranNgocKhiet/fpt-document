@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1_fpt\\7_sp26\\2_prn222\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\Q1.csproj",
+      "projectUniqueName": "D:\\6_repositories\\fpt-document\\semester-7-sp26\\prn222\\prn222-pe\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\Q1.csproj",
       "projectName": "Q1",
-      "projectPath": "D:\\1_fpt\\7_sp26\\2_prn222\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\Q1.csproj",
+      "projectPath": "D:\\6_repositories\\fpt-document\\semester-7-sp26\\prn222\\prn222-pe\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\Q1.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\1_fpt\\7_sp26\\2_prn222\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\obj\\",
+      "outputPath": "D:\\6_repositories\\fpt-document\\semester-7-sp26\\prn222\\prn222-pe\\PRN222_Trial_2Mar26\\PE_PRN222_GivenSolution\\Q1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
