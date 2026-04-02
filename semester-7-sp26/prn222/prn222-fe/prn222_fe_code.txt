@@ -1,0 +1,234 @@
+--- PRN222_FE_CODE_QUESTION ---
+
+Q1:
+```
+Uri info = new Uri("https://www.asp.net:80/info?id=123#fragment");
+Console.WriteLine($"{info.Scheme};{info.Host};{info.Port}");
+```
+return 
+```
+https;www.asp.net;80
+```
+
+Q2:
+```
+Uri info = new Uri("http://www.mystore.com:80/info?id=100#fragment");
+Uri page = new Uri("http://www.mystore.com/info/page.html");
+Uri relative = info.MakeRelativeUri(page);
+Console.WriteLine($"IsAbsoluteUri: {relative.IsAbsoluteUri}");
+Console.WriteLine($"RelativeUri: {relative.ToString()}");
+```
+return
+```
+IsAbsoluteUri: False
+RelativeUri: info/page.html
+```
+
+Q3:
+```
+Uri info = new Uri("https://www.asp.net:80/info?id=P001#fragment");
+Console.WriteLine($"{info.PathAndQuery};{info.Query};{info.Fragment}");
+```
+return
+```
+/info?id=P001;?id=P001;#fragment
+```
+
+Q4:
+```
+static void PrintNumber(string message){
+for (int i = 1;i <= 2; i++) {
+Console.WriteLine($"{message}:{i}");
+Thread.Sleep(1000);
+}
+}
+static void Main(){
+Thread.CurrentThread.Name = "Main";
+Task task01 = new Task(() => PrintNumber("Task 01"));
+task01.Start();
+Console.WriteLine($"Thread '{Thread.CurrentThread.Name}'");
+Console.ReadKey();
+}
+```
+return
+```
+Results are unpredictable
+```
+
+Q5: 
+```
+static void Show(string message){
+Console.Write(message);
+}
+async static Task Main(string[] args){
+Task[] arr = {
+Task.Run(()=>Show("A")),
+Task.Run(()=>Show("B"))
+};
+await Task.WhenAll(arr);
+Console.ReadLine();
+}
+```
+return
+```
+Results are unpredictable
+```
+
+Q6:
+```
+public record Order{
+public int Orderld { get; set; }
+public string OrderDate{ get; set; }
+}
+//---------------------------
+class Program{
+static void Main(string[] args){
+string orderJson = @"[
+{""OrderId"":100,""OrderDate"":""1/1/2020""}
+]";
+var orders = JsonSerializer
+.Deserialize<Order>(orderJson);
+Console.WriteLine($"{orders.Count}");
+Console.ReadKey();
+}
+}
+```
+return
+```
+Compile-time error
+```
+
+Q7:
+```
+public class Employee{
+public string firstName { get; set; }
+[JsonIgnore]
+public string lastName { get; set; }
+}
+//------------------------------
+class Program{
+static void Main(string[] args){
+string empJson = @"{
+""firstName"":""John"",
+""lastName":""Doe""
+}";
+var emp = JsonSerializer.Deserialize<Employee>(empJson);
+Console.WriteLine($"{emp.firstName):{emp.lastName}");
+Console.ReadKey();
+}
+}
+```
+return
+```
+John:
+```
+
+Q8:
+```
+public record Order{
+public int Orderld { get; set; }
+public string OrderDate{ get; set; }
+}
+//-----------------------------
+class Program{
+static void Main(string[] args){
+List<Order> orders = new List<Order> {
+new Order{ Orderld=1.OrderDate="12/15/2030"}
+};
+var orderJson = JsonSerializer.Serialize(orders);
+Console.WriteLine($"{orderJson}");
+Console.ReadKey();
+}
+}
+```
+return
+```
+[{"OrderId":1,"OrderDate":"12/15/2030"}]
+```
+
+Q9:
+```
+public record Phone{
+public string Name{ get; set; }
+public double Price { get; set; }
+}
+//----------------------------
+class Program{
+static void Main(string[] args){
+string phoneXML = @"<ArrayOfPhone>
+<Phone>
+<Name>Nokia</Name>
+<Price>15.5</Price>
+</Phone>
+<Phone>
+<Name>Samsung</Name>
+<Price>11.5</Price>
+</Phone>
+</ArrayOfPhone>";
+var xs = new XmlSerializer(typeof(List<Phone>));
+var phones = (List<Phone>)xs. Deserialize(new
+StringReader(phoneXML));
+Console.WriteLine($" {phones.Average(p=>p.Price)}");
+Console.ReadKey();
+}
+}
+```
+return
+```
+13.5
+```
+
+Q10:
+```
+public class Order{
+public int Orderld { get; set; }
+public double Total{ get; set; }
+}
+//---------------------------
+class Program{
+static void Main(string[] args){
+string orderJson = @"[
+{""Orderld"":1,""Total"": 10.5},
+{""OrderId"":2,""Total"": 20.5}
+]";
+var orders = JsonSerializer.
+Deserialize<List<Order>>(orderJson);
+Console.WriteLine($"{orders.Count):{orders.Sum(o=>o.Total)}");
+Console.ReadKey();
+}
+}
+```
+return
+```
+2:31
+```
+
+Q11:
+```
+class Program{
+public static async Task<int> Method1(){
+int sum = 0;
+await Task.Run(() => {
+for(int i = 1; i <= 5; i++){
+sum += i;
+}
+});
+return sum;
+}
+public static void Method2(int sum){
+Console.WriteLine($"{++sum}");
+}
+public static async Task callMethod(){
+var s = await Method1();
+Method2(s);
+}
+static async Task Main(string[] args){
+await callMethod();
+Console.ReadKey();
+}
+}
+```
+return
+```
+16
+```

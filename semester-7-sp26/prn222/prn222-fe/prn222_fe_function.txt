@@ -1,0 +1,53 @@
+--- PRN222_FE_FUNCTION_QUESTION ---
+
+```BaseAddress```
+- properties of the HttpClient Class
+- used to get or set the base address of URI of the Internet resource used when sending requests
+
+```ContentLength```
+- properties of the WebRequest class
+- used to get or set the content length of the request data being sent
+
+```PostAsync(String, HttpContent)```
+- methods of the HttpClient Class
+- used to send a POST request to the specified Uri as an asynchronous operation
+
+```GetAsync(String)```
+- methods of the HttpClient Class
+- used to send a GET request to the specified Uri as an asynchronous operation
+
+```GetResponse()```
+- methods of the WebRequest class
+- returns a response to an Internet request
+
+```Headers```
+- properties of the WebResponse class
+- used to get a collection of headers name-value pairs associated with this request
+	
+```GetRequestStream()```
+- methods of the WebRequest Class
+- returns a stream for writing data to the Internet resource
+
+```GetResponseStream()```
+- methods of the WebResponse Class
+- returns the data stream from the Internet resource
+
+```TaskFactory```
+- classes of the System.Threading.Tasks Namespace
+- provides support for creating and scheduling Task objects
+
+```AddScoped()```
+- used to register a Scoped service in ServiceCollection
+
+```Groups.AddToGroupAsync()```
+- used to add a client to a SignalR group
+
+```invoke()```
+- used to invoke a server-side hub method from the client
+
+```on()```
+- used to receive messages from the server on the client-side
+
+```CreateWriter()```
+- methods of the XmlSerializer class 
+- returns a writer used to serialize the object
