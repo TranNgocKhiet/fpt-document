@@ -1,0 +1,66 @@
+﻿using System.Net;
+using System.Net.Sockets;
+using System.Reflection.PortableExecutable;
+using System.Text;
+using System.Text.Json;
+
+namespace Q1
+{
+    public class Employee
+    {
+        public string employeeId { get; set; } = "";
+        public string fullName { get; set; } = "";
+        public string department { get; set; } = "";
+        public string salary { get; set; } = "";
+    }
+
+    public class Q1
+    {
+        private static List<Employee> books = new List<Employee>();
+        private static List<(string employeeId, string fullName, string department, string salary)> listEmployees = new List<(string, string, string, string)>();
+
+        public static async Task Main(string[] args)
+        {
+
+            TcpListener server = new TcpListener(IPAddress.Parse("127.0.0.1"), 5000);
+            server.Start();
+
+            Console.WriteLine("Employee Server is running on 127.0.0.1:5000");
+            Console.WriteLine("Waiting for client connections...");
+
+            while (true)
+            {
+                try
+                {
+                    TcpClient client = await server.AcceptTcpClientAsync();
+                    _ = Task.Run(() => HandleClient(client));
+                    Console.WriteLine($"Client connected from {IPAddress.Parse("127.0.0.1")} : {5000}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error accepting client: {ex.Message}");
+                }
+            }
+        }
+
+        private static async Task HandleClient(TcpClient client)
+        {
+            NetworkStream stream = client.GetStream();
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error handling client: {ex.Message}");
+            }
+            finally
+            {
+                client.Close();
+            }
+        }
+
+
+    }
+}

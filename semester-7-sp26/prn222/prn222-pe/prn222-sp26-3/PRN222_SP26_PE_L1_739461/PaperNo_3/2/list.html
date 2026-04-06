@@ -1,0 +1,117 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student List - PRN222_q22</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0" />
+    <link rel="stylesheet" href="/PRN222_q22.styles.css?v=mQslZWq5nkQz709iIEpspv8UV46FgHw1YWolj3b_bEY" />
+</head>
+<body>
+    <div b-r34wvzf53o class="container">
+        <main b-r34wvzf53o role="main" class="pb-3">
+
+            
+                <h2>Student List</h2>
+
+                <div style="margin-bottom:12px;">
+                    <a id="lnk_addNew" href="">Add New Student</a>
+                </div>
+
+                <form method="get" style="margin-bottom:12px;" action="">
+                    <select id="sl_major" name="major">
+                        <option id="opt_default" value="" selected>All Majors</option>
+                        <option id="opt_1" value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option id="opt_2" value="Information Assurance">Information Assurance</option>
+                    </select>
+
+                    <button type="submit" id="btn_filter">Filter</button>
+                </form>
+
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>StudentId</th>
+                            <th>StudentName</th>
+                            <th>Email</th>
+                            <th>Major</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="td_studentId_1">1</td>
+                            <td id="td_studentName_1">
+                                <a id="a_1" href="">Nguyen Van A</a>
+                            </td>
+                            <td id="td_email_1">a@gmail.com</td>
+                            <td id="td_major_1">Software Engineering</td>
+                        </tr>
+                        <tr>
+                            <td id="td_studentId_2">2</td>
+                            <td id="td_studentName_2">
+                                <a id="a_2" href="">Tran Thi B</a>
+                            </td>
+                            <td id="td_email_2">b@gmail.com</td>
+                            <td id="td_major_2">Information Assurance</td>
+                        </tr>
+                        <tr>
+                            <td id="td_studentId_3">3</td>
+                            <td id="td_studentName_3">
+                                <a id="a_3" href="">Le Van C</a>
+                            </td>
+                            <td id="td_email_3">c@gmail.com</td>
+                            <td id="td_major_3">Software Engineering</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <div style="margin-top:20px;">
+                    <div style="margin-bottom:8px;">
+                        Registered courses: <span id="span_regCount">2</span>
+                        - Total credits: <span id="span_totalCredits">6</span>
+                    </div>
+
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>RegId</th>
+                                <th>CourseCode</th>
+                                <th>CourseName</th>
+                                <th>Credits</th>
+                                <th>Semester</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="td_regId_4">4</td>
+                                <td id="td_courseCode_4">MLN111</td>
+                                <td id="td_courseName_4">Introduction to Machine Learning</td>
+                                <td id="td_credits_4">3</td>
+                                <td id="td_semester_4">Spring2025</td>
+                            </tr>
+                            <tr>
+                                <td id="td_regId_5">5</td>
+                                <td id="td_courseCode_5">CSI104</td>
+                                <td id="td_courseName_5">Computer Security Basics</td>
+                                <td id="td_credits_5">3</td>
+                                <td id="td_semester_5">Fall2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+           
+
+    </main>
+</div>
+
+
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</body>
+</html>

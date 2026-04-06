@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer List - PRN222_q21</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0" />
+    <link rel="stylesheet" href="/PRN222_q21.styles.css?v=C5BrL86Td0ykd_rrvxvkPCjzPKElFVhidrs7-AELi5g" />
+</head>
+<body>
+    
+    <div b-mv4h914u0x class="container">
+        <main b-mv4h914u0x role="main" class="pb-3">
+
+            
+                <h2>Customer List</h2>
+
+                <div style="margin-bottom:12px;">
+                    <a id="lnk_addNew" href="">Add New Customer</a>
+                </div>
+
+                <form method="get" style="margin-bottom:12px;" action="">
+                    <select id="sl_city" name="city">
+                        <option id="opt_default" value="" selected>All Cities</option>
+
+                        <option id="opt_1" value="Da Nang">Da Nang</option>
+                        <option id="opt_2" value="Ha Noi">Ha Noi</option>
+                    </select>
+
+                    <button type="submit" id="btn_filter">Filter</button>
+                </form>
+
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>CustomerId</th>
+                            <th>CustomerName</th>
+                            <th>Email</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="td_customerId_1">1</td>
+                            <td id="td_customerName_1">
+                                <a id="a_1" href="">Nguyen Van A</a>
+                            </td>
+                            <td id="td_email_1">a@gmail.com</td>
+                            <td id="td_city_1">Ha Noi</td>
+                        </tr>
+                        <tr>
+                            <td id="td_customerId_3">3</td>
+                            <td id="td_customerName_3">
+                                <a id="a_3" href="">Le Van C</a>
+                            </td>
+                            <td id="td_email_3">c@gmail.com</td>
+                            <td id="td_city_3">Ha Noi</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top:20px;">
+                    <h3>Orders</h3>
+                    <div style="margin-bottom:10px;">
+                        Order Count: <span id="span_orderCount">2</span>
+                        |
+                        Total Amount: <span id="span_totalAmount">399.99</span>
+                    </div>
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>OrderId</th>
+                                <th>OrderDate</th>
+                                <th>TotalAmount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="td_orderId_4">4</td>
+                                <td id="td_orderDate_4">2026-03-04 16:45:00</td>
+                                <td id="td_totalAmount_4">99.99</td>
+                                <td id="td_status_4">Pending</td>
+                            </tr>
+                            <tr>
+                                <td id="td_orderId_5">5</td>
+                                <td id="td_orderDate_5">2026-03-05 10:30:00</td>
+                                <td id="td_totalAmount_5">300.00</td>
+                                <td id="td_status_5">Delivered</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+
+    </main>
+</div>
+
+
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</body>
+</html>

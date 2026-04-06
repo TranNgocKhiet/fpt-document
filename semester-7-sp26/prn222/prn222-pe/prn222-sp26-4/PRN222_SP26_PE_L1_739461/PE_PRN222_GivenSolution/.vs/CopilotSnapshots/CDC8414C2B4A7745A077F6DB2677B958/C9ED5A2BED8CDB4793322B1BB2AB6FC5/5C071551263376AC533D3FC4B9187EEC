@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Q2.Models.Customer>
+@{
+    var customers = ViewBag.Customers as List<Q2.Models.Customer>;
+    var selectedName = (int?)ViewBag.SelectedCustomerName;
+}
+<h2>Customer List</h2>
+<div>
+    <a href="/Customer/Create">Add New Customer</a>
+</div>
+<form method="get" action="">
+    <select id="sl_city" name="city">
+        <option id="opt_default" value="" selected>All Cities</option>
+        <option id="opt_1" value="Da Nang">Da Nang</option>
+        <option id="opt_2" value="Ha Noi">Ha Noi</option>
+        <option id="opt_3" value="Hai Phong">Hai Phong</option>
+    </select>
+
+    <button type="submit" id="btn_filter">Filter</button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>CustomerId</th>
+            <th>CustomerName</th>
+            <th>Email</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in customers)
+        {
+            <tr>
+                <td id="td_customerId_@customer.CustomerId">@customer.CustomerId</td>
+                <td id="td_customerName_@customer.CustomerName">
+                    <a id="a_@customer.CustomerName" href="/Customer/List/@customer.CustomerName">@customer.CustomerName</a>
+                </td>
+                <td id="td_email_@customer.Email">@customer.Email</td>
+                <td id="td_city_@customer.City">@customer.City</td>
+            </tr>
+        }
+    </tbody>
+</table>

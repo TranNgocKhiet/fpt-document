@@ -1,0 +1,43 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Q2.Data;
+using Q2.Models;
+
+namespace Q2.Controllers
+{
+    public class CustomerController : Controller
+    {
+        private readonly PRN222_26SprB1_1 _context;
+
+        public CustomerController(PRN222_26SprB1_1 context)
+        {
+            _context = context;
+        }
+
+        public IActionResult List(string customerName, string city)
+        {
+            var customers = _context.Customers.OrderBy(c => c.CustomerId).ToList();
+
+            var ordersQuery =  _context.Orders.Include(o => o.Customer).ToList();
+
+            var customerOrder = ordersQuery.Where(o => o.Customer.CustomerName.ToLower().Equals(customerName.ToLower()));
+
+            var customerFilter = customers.Where(c => c.City.ToLower().Equals(city.ToLower()));
+            ViewBag.Customers = customers;
+            ViewBag.CustomerOrders = customerOrder;
+            ViewBag.SelectedCustomerName = customerName;
+            ViewBag.City = customerFilter;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}

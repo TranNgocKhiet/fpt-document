@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\1_fpt\\7_sp26\\2_prn222\\PE_PRN222_GivenSolution\\PE_PRN222_GivenSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F7A74824-36FE-445E-93C6-DD088D093870}|Q1\\Q1.csproj|d:\\1_fpt\\7_sp26\\2_prn222\\pe_prn222_givensolution\\pe_prn222_givensolution\\q1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7A74824-36FE-445E-93C6-DD088D093870}|Q1\\Q1.csproj|solutionrelative:q1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\1_fpt\\7_sp26\\2_prn222\\PE_PRN222_GivenSolution\\PE_PRN222_GivenSolution\\Q1\\Program.cs",
+              "RelativeDocumentMoniker": "Q1\\Program.cs",
+              "ToolTip": "D:\\1_fpt\\7_sp26\\2_prn222\\PE_PRN222_GivenSolution\\PE_PRN222_GivenSolution\\Q1\\Program.cs",
+              "RelativeToolTip": "Q1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAD9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T22:53:10.342Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿@model Q2.Models.Customer
+@{
+
+}
+<h2>Create Customer</h2>
+<form method="post" action="/Customer/Create">
+
+    <div style="margin-bottom:10px;">
+        <label for="txt_customerName">Customer Name</label><br />
+        <input type="text" id="txt_customerName" name="CustomerName" value="@Model.CustomerName" />
+    </div>
+
+    <div>
+        <label for="txt_email">Email</label><br />
+        <input type="text" id="txt_email" name="Email" value="@Model.Email" />
+    </div>
+
+    <div>
+        <label for="sl_city">City</label><br />
+        <select id="sl_city" name="City">
+            <option id="opt_1" value="Da Nang">Da Nang</option>
+            <option id="opt_2" value="Ha Noi">Ha Noi</option>
+            <option id="opt_3" value="Hai Phong">Hai Phong</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="submit">Create</button>
+        <a id="btn_back" href="/Customer/List">Back to List</a>
+    </div>
+</form>

@@ -1,0 +1,77 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Q2.Data;
+using Q2.Models;
+
+namespace Q2.Controllers
+{
+    public class CustomerController : Controller
+    {
+        private readonly PRN222_26SprB1_1 _context;
+
+        public CustomerController(PRN222_26SprB1_1 context)
+        {
+            _context = context;
+        }
+
+        public IActionResult List(string? customerName, string? city)
+        {
+            var allCities = _context.Customers
+                .Select(c => c.City)
+                .Distinct()
+                .OrderBy(c => c)
+                .ToList();
+
+            var customersQuery = _context.Customers.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(city))
+            {
+                customersQuery = customersQuery.Where(c => c.City == city);
+            }
+
+            var customers = customersQuery
+                .OrderBy(c => c.CustomerId)
+                .ToList();
+
+            var customerOrders = new List<Order>();
+            if (!string.IsNullOrWhiteSpace(customerName))
+            {
+                customerOrders = _context.Orders
+                    .Include(o => o.Customer)
+                    .Where(o => o.Customer.CustomerName == customerName)
+                    .OrderBy(o => o.OrderId)
+                    .ToList();
+            }
+
+            var totalAmount = customerOrders.Sum(o => o.TotalAmount);
+
+            ViewBag.Cities = allCities;
+            ViewBag.CustomerOrders = customerOrders;
+            ViewBag.SelectedCustomerName = customerName;
+            ViewBag.SelectedCity = city;
+            ViewBag.OrderCount = customerOrders.Count;
+            ViewBag.TotalAmount = totalAmount;
+
+            return View(customers);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new Customer());
+        }
+
+        [HttpPost]
+        public IActionResult Create(Customer customer)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(customer);
+            }
+
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(List));
+        }
+    }
+}
